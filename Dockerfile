@@ -4,7 +4,7 @@ WORKDIR /usr/src/docker-react-sample
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm install --force
 
 COPY . .
 
@@ -12,5 +12,5 @@ EXPOSE 3000
 
 CMD ["npm", "start"]
 
-#docker build -t test_job_front_image .
-#docker run -d --name test_job_front_container -p 3000:3000 test_job_front_image
+# docker build -t test_job_front_image .
+# docker run -d --name test_job_front_container -p 3001:3000 test_job_front_image
